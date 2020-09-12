@@ -5,19 +5,18 @@ public class Human {
     private String name = "?";
     private boolean sex;
     private int age;
-    private int height;
-    private int weight;
+
+    private Body body;
+    private RHand rHand;
+    private LHand lHand;
+    private Head head;
+    private RLeg rLeg;
+    private LLeg lLeg;
 
     public Human() {}
 
     public int getAge() {
         return age;
-    }
-    public int getHeight() {
-        return height;
-    }
-    public int getWeight() {
-        return weight;
     }
     public String getName() {
         return name;
@@ -28,10 +27,6 @@ public class Human {
     public String getSurname() {
         return surname;
     }
-    public void setHeight(int height) {
-        if(height > 0 && height <300) this.height = height;
-        else System.out.println("Invalid height");
-    }
     public void setName(String name) {
         this.name = name;
     }
@@ -41,14 +36,53 @@ public class Human {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-    public void setWeight(int weight) {
-        if(weight > 0 && weight <300){
-            this.weight = weight;
-        }
-        else{
-            System.out.println("Invalid weight");
-        }
+
+    public Body getBody() {
+        return body;
     }
+    public void setBody(int height, int weight) {
+        body.setHeight(height);
+        body.setHeight(weight);
+    }
+
+    public Head getHead() {
+        return head;
+    }
+    public void setHead(String HairColor, String EyesColor) {
+        head.setHairColor(HairColor);
+        head.setEyesColor(EyesColor);
+    }
+
+    public LHand getlHand() {
+        return lHand;
+    }
+    public void setlHand(int FingersCount) {
+        lHand.setFingersCount(FingersCount);
+    }
+
+    public RHand getrHand() {
+        return rHand;
+    }
+    public void setrHand( int FingersCount) {
+        rHand.setFingersCount(FingersCount);
+    }
+
+    public LLeg getlLeg() {
+        return lLeg;
+    }
+    public void setlLeg(String FootSize, String LegLength) {
+       lLeg.setFootSize(FootSize);
+       lLeg.setLegLength(LegLength);
+    }
+
+    public RLeg getrLeg() {
+        return rLeg;
+    }
+    public void setrLeg(String FootSize, String LegLength) {
+        rLeg.setFootSize(FootSize);
+        rLeg.setLegLength(LegLength);
+    }
+
     public boolean isSex() {
         return sex;
     }
@@ -60,8 +94,12 @@ public class Human {
                 ", name='" + name + '\'' +
                 ", sex=" + sex +
                 ", age=" + age +
-                ", height=" + height +
-                ", weight=" + weight +
+                ", body=" + body +
+                ", rHand=" + rHand +
+                ", lHand=" + lHand +
+                ", head=" + head +
+                ", rLeg=" + rLeg +
+                ", lLeg=" + lLeg +
                 '}';
     }
 
@@ -88,25 +126,16 @@ public class Human {
         else{
             System.out.println("Invalid surname");
         }
+
         if(name!=null) {
             this.name = name;
         }
         else{
             System.out.println("Invalid name");
         }
+
         this.sex = sex;
-        if(weight > 0 && weight <300){
-            this.weight = weight;
-        }
-        else {
-            System.out.println("Invalid weight of " + name + " " + surname);
-        }
-        if(height > 0 && height <300){
-            this.height = height;
-        }
-        else {
-            System.out.println("Invalid height of " + name + " " + surname);
-        }
+
         if(age > 0 && age <100){
             this.age = age;
         }
