@@ -2,7 +2,7 @@ package Konekotyan;
 
 import java.util.Random;
 
-public class pract {
+class pract {
 
 
         /*int[] n = {67, 16, 74, 24, 6, 178, 66, 3, 0};      || первое задание
