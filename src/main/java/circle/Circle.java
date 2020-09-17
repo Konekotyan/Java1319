@@ -1,6 +1,6 @@
 package circle;
 
-class Circle {
+public class Circle {
     private double x; // абсцисса центра
     private double y; // ордината центра
     private double r; // радиус

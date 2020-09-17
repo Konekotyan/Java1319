@@ -1,6 +1,6 @@
-package circle;
+import circle.Circle;
 
-public class Main {
+public class CircleTest {
     public static void main(String[] args) {
         Circle o1 = new Circle();
         o1.printCircle(); // Окружность с центром (0.0;0.0) и радиусом 1.0
