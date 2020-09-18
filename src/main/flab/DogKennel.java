@@ -1,4 +1,4 @@
-package main.Konekotyan;
+package main.flab;
 
 import java.util.Scanner;
 

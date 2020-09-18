@@ -1,6 +1,4 @@
-package main.Konekotyan;
-
-import java.util.Random;
+package main.flab;
 
 class pract {
 

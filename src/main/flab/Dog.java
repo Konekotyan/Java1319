@@ -1,4 +1,4 @@
-package main.Konekotyan;
+package main.flab;
 
 public class Dog {
     private String name;
