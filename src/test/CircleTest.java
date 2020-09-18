@@ -1,4 +1,6 @@
-import circle.Circle;
+package test;
+
+import main.circle.Circle;
 
 public class CircleTest {
     public static void main(String[] args) {

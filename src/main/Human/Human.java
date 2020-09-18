@@ -1,4 +1,4 @@
-package Human;
+package main.Human;
 
 import java.util.Scanner;
 

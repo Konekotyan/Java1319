@@ -1,4 +1,4 @@
-package Konekotyan;
+package main.Konekotyan;
 
 import java.util.Scanner;
 

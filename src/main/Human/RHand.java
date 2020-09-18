@@ -1,4 +1,4 @@
-package Human;
+package main.Human;
 
 public class RHand {
     private int FingersCount;

@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Dogs nursery" />
         <module name="Java1319" />
+      </profile>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="pom.xml/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="pom.xml/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Dogs nursery" />
       </profile>
     </annotationProcessing>
   </component>

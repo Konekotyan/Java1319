@@ -1,6 +1,6 @@
-package Human;
+package main.Human;
 
-public class RLeg {
+public class LLeg {
     private String FootSize;
     private String LegLength;
 

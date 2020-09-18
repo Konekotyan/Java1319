@@ -1,4 +1,4 @@
-package circle;
+package main.circle;
 
 public class Circle {
     private double x; // абсцисса центра

@@ -1,4 +1,4 @@
-package Human;
+package main.Human;
 
 public class LHand {
     private int FingersCount;

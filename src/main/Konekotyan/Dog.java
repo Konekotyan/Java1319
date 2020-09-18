@@ -1,4 +1,4 @@
-package Konekotyan;
+package main.Konekotyan;
 
 public class Dog {
     private String name;
