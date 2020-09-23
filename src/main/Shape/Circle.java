@@ -35,6 +35,6 @@ public class Circle extends Shape{
 
     @Override
     public String toString() {
-        return String.format("Круг {\n\t\tцвет = %s\n\t\tрадиус = %s см }", getColor(), getRadius());
+        return String.format("Круг {\n\tцвет = %s\n\tрадиус = %s см }", getColor(), getRadius());
     }
 }

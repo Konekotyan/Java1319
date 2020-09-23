@@ -34,6 +34,6 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return String.format("Квадрат {\n\t\tцвет = %s\n\t\tсторона = %s см }", getColor(), getSide());
+        return String.format("Квадрат {\n\tцвет = %s\n\tсторона = %s см }", getColor(), getSide());
     }
 }

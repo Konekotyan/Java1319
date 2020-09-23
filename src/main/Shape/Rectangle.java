@@ -45,6 +45,6 @@ public class Rectangle extends Shape{
 
     @Override
     public String toString() {
-        return String.format("Прямоугольник {\n\t\tцвет = %s\n\t\tдлинна = %s см \n\t\tвысота = %s см }", getColor(), getWidth(), getLength());
+        return String.format("Прямоугольник {\n\tцвет = %s\n\tдлинна = %s см \n\tвысота = %s см }", getColor(), getWidth(), getLength());
     }
 }
