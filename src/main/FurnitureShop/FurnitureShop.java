@@ -23,7 +23,6 @@ public class FurnitureShop {
     public void del(Table table) {
         furniture.remove(table);
     }
-
     @Override
     public String toString() {
         return "\nFurnitureShop:\n" +

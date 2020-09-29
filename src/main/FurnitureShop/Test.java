@@ -13,5 +13,12 @@ public class Test {
         furnitureShop.add(table);
         furnitureShop.add(chair);
         System.out.println(furnitureShop.toString());
+
+        Person customer = new Person(15000, "Bob");
+        customer.addProduct(table);
+        customer.addProduct(chair);
+        customer.addProduct(chair);
+        System.out.println(customer.toString());
+        System.out.println(customer.getBalance());
     }
 }
