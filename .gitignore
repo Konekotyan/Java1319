@@ -1,6 +1,6 @@
-/target/
-/.idea/
-/pom.xml/
-/pom.xml/target/
-/pom.xml/target/classes/
-/target/classes/
+.target/
+.idea/
+.pom.xml/
+.pom.xml/target/
+.pom.xml/target/classes/
+.out/
