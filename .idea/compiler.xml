@@ -15,5 +15,8 @@
         <module name="Dogs nursery" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1sem" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

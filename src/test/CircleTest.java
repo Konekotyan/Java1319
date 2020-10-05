@@ -1,6 +1,6 @@
 package test;
 
-import main.circle.Circle;
+import main.Lab_3.circle.Circle;
 
 public class CircleTest {
     public static void main(String[] args) {

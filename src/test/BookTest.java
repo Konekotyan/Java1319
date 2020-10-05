@@ -1,6 +1,6 @@
 package test;
 
-import main.Book.Book;
+import main.Lab_3.Book.Book;
 
 public class BookTest {
     public static void main(String[] args) {

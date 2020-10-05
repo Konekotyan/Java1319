@@ -1,6 +1,6 @@
 package test;
 
-import main.Human.Human;
+import main.Lab_3.Human.Human;
 
 public class HumanTest {
     public static void main(String[] args) {
