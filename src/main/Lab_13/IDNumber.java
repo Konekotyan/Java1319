@@ -25,6 +25,33 @@ public class IDNumber {
         }
     }
 
+    public static Student[] mergeSort(Student[] a1, Student[] a2) {
+        Student[] a3 = new Student[a1.length + a2.length];
+
+        int i = 0, j = 0;
+        for (int k = 0; k < a3.length; k++) {
+
+            if (i > a1.length - 1) {
+                Student a = a2[j];
+                a3[k] = a;
+                j++;
+            } else if (j > a2.length - 1) {
+                Student a = a1[i];
+                a3[k] = a;
+                i++;
+            } else if (a1[i].getGpa() < a2[j].getGpa()) {
+                Student a = a1[i];
+                a3[k] = a;
+                i++;
+            } else {
+                Student b = a2[j];
+                a3[k] = b;
+                j++;
+            }
+        }
+        return a3;
+    }
+
     public void add(Student student) {
         uni[size] = student;
         size++;
