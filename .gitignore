@@ -1,0 +1,6 @@
+.target/
+.idea/
+.pom.xml/
+.pom.xml/target/
+.out/production/1sem
+.target/classes/
