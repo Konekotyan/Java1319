@@ -4,3 +4,6 @@
 .pom.xml/target/
 .out/production/1sem
 .target/classes/
+/.idea/
+/target/
+/out/
