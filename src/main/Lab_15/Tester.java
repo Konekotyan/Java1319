@@ -2,14 +2,22 @@ package main.Lab_15;
 
 public class Tester {
     public static void main(String[] args) {
-        Collection col = new Collection(1,5,3,7,2,9,10,35,12);
-
-        System.out.println(col.getMax());
-        System.out.println(col.getMin());
-        System.out.println(col.getMiddleArif());
-        col.add(44);
-        col.delete(3);
-        System.out.println(col.searchValue(3));
-        System.out.println(col.searchInd(2));
+        Collection collection = new Collection();
+        collection.add(3);
+        System.out.println(collection);
+        collection.add(5);
+        System.out.println(collection);
+        collection.add(989);
+        System.out.println(collection);
+        collection.add(134);
+        System.out.println(collection);
+        collection.add(12);
+        System.out.println(collection);
+        collection.remove(989);
+        System.out.println(collection);
+        System.out.println(collection.getMax());
+        System.out.println(collection.getMin());
+        System.out.println(collection.getAverage());
     }
+
 }

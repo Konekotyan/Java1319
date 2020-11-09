@@ -1,62 +1,57 @@
 package main.Lab_15;
 
-import java.util.ArrayList;
+import main.Lab_14.Sorts;
+import java.util.Arrays;
 
-public class Collection {
-    ArrayList<Integer> mas = new ArrayList<Integer>();
+public class Collection{
+    private int[] arr = new int[0];
+    private Sorts sorts = new Sorts();
 
-    public Collection(int ... args){
-        for (int i=0;i<args.length;i++){
-            mas.add(args[i]);
+    public void add(int num){
+        int[] newArray = new int[arr.length + 1];
+        System.arraycopy(arr, 0, newArray, 0, arr.length);
+        newArray[arr.length] = num;
+        arr = newArray;
+    }
+
+    public void remove(int n){
+        int ind = sorts.recursiveBinarySearch(arr,0,arr.length-1,n);
+        int[] newArray = new int[arr.length - 1];
+        System.arraycopy(arr, 0, newArray, 0, ind);
+        System.arraycopy(arr, ind+1, newArray, ind, arr.length-ind-1);
+        arr = newArray;
+    }
+
+    public int find(int n){
+        return sorts.recursiveBinarySearch(arr,0,arr.length-1,n);
+    }
+
+    public int get(int ind){
+        return arr[ind];
+    }
+
+    public int getMax(){
+        int[] testArr = arr;
+        sorts.quickSort(testArr,0,testArr.length-1);
+        return testArr[testArr.length-1];
+    }
+    public int getMin(){
+        int[] testArr = arr;
+        sorts.quickSort(testArr,0,testArr.length-1);
+        return testArr[0];
+    }
+    public float getAverage(){
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
         }
+        return 1.0f * sum / arr.length;
     }
 
-    void add(int element){
-        mas.add(element);
+    @Override
+    public String toString() {
+        return "BestArray{" +
+                "arr=" + Arrays.toString(arr) +
+                '}';
     }
-
-    void delete(int element){
-        int ind;
-        for (int i=0;i<mas.size();i++){
-            if (mas.get(i) == element) {mas.remove(i);
-                break;}
-        }
-
-    }
-
-    int searchValue(int value){
-        for (int i=0;i<mas.size();i++){
-            if (mas.get(i) == value ) return mas.get(i);
-        }
-        return -1;
-    }
-
-    int searchInd(int index){
-        return mas.get(index);
-    }
-
-    int getMax(){
-        int now = mas.get(0);
-        for (int i=0;i<mas.size();i++){
-            if (mas.get(i) > now) now = mas.get(i);
-        }
-        return now;
-    }
-
-    int getMin(){
-        int now = mas.get(0);
-        for (int i=0;i<mas.size();i++){
-            if (mas.get(i) < now) now = mas.get(i);
-        }
-        return now;
-    }
-
-    double getMiddleArif(){
-        double sum=0;
-        for (int i=0;i<mas.size();i++){
-            sum+=mas.get(i);
-        }
-        return sum/mas.size();
-    }
-
 }
