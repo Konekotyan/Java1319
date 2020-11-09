@@ -3,64 +3,46 @@ package main.Lab_14;
 import java.util.Random;
 
 public class Test {
-    public static void main(String []args){
+    public static void main(String[] args) {
+        int[] array = new int[10000];
+        int[] array2 = new int[10000];
+        int[] array3 = new int[10000];
+        int[] array4 = new int[10000];
         Random random = new Random();
-        SortS sort = new SortS();
-        Student found;
-        Student a = new Student(2000);
-
-        System.out.println("Быстрая сортировка.");
-        int k = random.nextInt(20);
-        Student[] students = new Student[k];
-        for (int i = 0;i < students.length;i++){
-            int m = random.nextInt(100);
-            students[i]= new Student(m);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt();
         }
-        sort.quicksort(students,0,students.length-1);
-        System.out.println("Отсортированный массив по убыванию");
+        array2 = array;
+        array3 = array;
+        array4 = array;
+        Sorts sorts = new Sorts();
 
-        for (Student student : students) {
-            System.out.print(student.getID() + " ");
-        }
-        System.out.println();
-        if (sort.recursialinearSearch(students,a,0)== null)
-            System.out.println("Такого числа не нашлось");
-        else{
-            found =(Student)sort.recursialinearSearch(students,a,0);
-            System.out.println("Число нашлось "+found.getID());
-        }
-        int l = 4000;
-        students = new Student[l];
-
-        for (int i = 0; i < students.length;i++){
-
-            students[i] = new Student(i);
-        }
-
-        sort.quicksort(students,0,students.length-1);
-        long start = System.nanoTime();
-        found = (Student)sort.binarySearch(students,a);
-        long finish = System.nanoTime();
-        long time = finish - start;
-        System.out.println("Бинарный = "+ String.format("%,2d",time)+"ns");
+        long start, end;
 
         start = System.nanoTime();
-        found = (Student)sort.recursialinearSearch(students,a,0);
-        finish = System.nanoTime();
-        time = finish - start;
-        System.out.println("Рекурсивный бинарный = "+ String.format("%,2d",time)+"ns");
-
+        sorts.sortArray(array);
+        end = System.nanoTime();
+        System.out.println("sortArray "+ (end - start));
         start = System.nanoTime();
-        found = (Student)sort.linearSearch(students,a);
-        finish = System.nanoTime();
-        time = finish - start;
-        System.out.println("Линейный = "+ String.format("%,2d",time)+"ns");
-
+        sorts.quickSort(array2,0,array2.length-1);
+        end = System.nanoTime();
+        System.out.println("quickSort "+ (end - start));
         start = System.nanoTime();
-        found = (Student)sort.recursialinearSearch(students,a,0);
-        finish = System.nanoTime();
-        time = finish - start;
-        System.out.println("Рекурсивный линейный = "+ String.format("%,2d",time)+"ns");
+        sorts.linearSearch(array,45);
+        end = System.nanoTime();
+        System.out.println("linearSearch "+ (end - start));
+        start = System.nanoTime();
+        sorts.recursiveLinearSearch(array,45,0);
+        end = System.nanoTime();
+        System.out.println("recursiveLinearSearch "+ (end - start));
+        start = System.nanoTime();
+        sorts.binarySearch(array, 45);
+        end = System.nanoTime();
+        System.out.println("binarySearch "+ (end - start));
+        start = System.nanoTime();
+        sorts.recursiveBinarySearch(array, 0, array.length-1, 45);
+        end = System.nanoTime();
+        System.out.println("recursiveBinarySearch "+ (end - start));
+        start = System.nanoTime();
     }
 }
-
