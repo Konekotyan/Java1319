@@ -66,7 +66,6 @@ public class Pyatnashki extends JFrame {
                     sum ++;
             }
         }
-        System.out.println(sum % 2 == 0);
         return sum % 2 == 0;
     }
 
@@ -123,6 +122,7 @@ public class Pyatnashki extends JFrame {
 
             }
     }
+    
     private void createMenu() {
         JMenuBar menu = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
